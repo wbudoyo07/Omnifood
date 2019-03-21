@@ -1,6 +1,6 @@
-/* -------------------------------------- */
-/* Basic Setup*/
-/*----------------------------------------*/
+/* 
+BASIC SETUP
+*/
 
 * {
     margin:0;
@@ -10,51 +10,105 @@
 
 html {
     background-color: #fff;
-    color:#555;
-    font-family: 'Lato','Arial',sans-serif;
+    color: #555;
+    font-family: 'Lato','Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
-/* -------------------------------------- */
-/* Reusable component*/
-/*----------------------------------------*/
+/* 
+RESUABLECOMPONENTS
+*/
 .row {
-    max-width:1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
-/* ------HEADING------- */
+section {
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+    
+}
+
+/* ---HEADING----- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
 h1 {
-    margin: 0;
+    margin-top:0;
     margin-bottom: 20px;
     color: #fff;
     font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
+    letter-spacing: 1px;
 }
 
-/* ----BUTTON----- */
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+h2:after {
+    display:block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* ---- PARAGRAPHS----- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ----- ICONS-------- */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+/* ---- BUTTONS ------ */
 .btn:link, 
-.btn:visited {
+.btn:visited{
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
+
 }
 
 .btn-full:link,
-.btn-full:visited {
-    background-color: #e67e22;
+.btn-full:active {
+    background-color: hsl(28, 80%, 52%);
     border: 1px solid #e67e22;
     color: #fff;
     margin-right: 15px;
 }
-
 .btn-ghost:link,
 .btn-ghost:visited {
     border: 1px solid #e67e22;
@@ -66,9 +120,9 @@ h1 {
     background-color: #cf6d17;
 }
 
-.btn-full:hover,
+.btn-full:link,
 .btn-full:active {
-    background-color: 1px solid #cf6d17;
+    border: 1px solid #cf6d17;
 }
 
 .btn-ghost:hover,
@@ -76,40 +130,39 @@ h1 {
     border: 1px solid #cf6d17;
     color: #fff;
 }
-/* -------------------------------------- */
-/* HEADER */
-/*----------------------------------------*/
+/* ----------------------------
+        HEADER
+-------------------------------*/
 header {
-    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
-    background-size:cover;
-    background-position:center;
-    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 .hero-text-box {
-    position:absolute;
-    width:1140px;
-    top:50%;
-    left:50%; 
-    transform: translate(-50%, -50%);
-
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
 }
 
 .logo {
     height: 100px;
-    /*  */
     width: auto;
-    float: left;
+    float:left;
     margin-top:20px;
 }
 
 .main-nav {
     float:right;
     list-style: none;
-    margin-top:55px;
+    margin-top: 55px;
 }
+
 .main-nav li {
-    display: inline-block;
+    display:inline-block;
     margin-left: 40px;
 }
 
@@ -121,12 +174,47 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.2s;
+    transition: border-bototm 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+/* ---------------------------------- */
+/* MEALS  */
+/* ----------------------------- */
+.section-meals {
+    padding:0;
+}
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
 
+.meals-showcase li {
+    display:block;
+    float:left;
+    width:25%;
 
+}
+
+.meal-photo {
+    width:100%;
+    margin:0;
+    overflow:hidden;
+    background-color: #000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width:100%;
+    height:auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform:scale(1.03);
+}
